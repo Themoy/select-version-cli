@@ -20,6 +20,10 @@ function getReleaseVersion() {
     }
     const releaseType = ['patch', 'minor', 'major', 'prepatch', 'preminor', 'premajor', 'prerelease']
     const choices = releaseType.map(item => `${item}: ${semver.inc(version, item)}`)
+    // 预发布版本允许版本号覆盖
+    if (version.indexOf('-') > -1) {
+      choices.push(`版本覆盖: ${version}`);
+    }
     prompt([
       {
         name: 'version',

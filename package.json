@@ -1,10 +1,11 @@
 {
-  "name": "select-version-cli",
-  "version": "0.0.2",
+  "name": "@themoy/select-version-cli",
+  "version": "0.0.1",
   "description": "A simple cli to help you select release version",
   "scripts": {
     "start": "./bin/select-version-cli",
-    "test": "jest"
+    "test": "jest",
+    "pub": "npm publish --access public"
   },
   "keywords": [
     "cli",
